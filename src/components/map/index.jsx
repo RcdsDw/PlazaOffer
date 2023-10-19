@@ -8,16 +8,18 @@ import {
 } from "react-leaflet";
 import HousePopup from "../popup";
 import L from 'leaflet';
+import house from "../../assets/maison.png"
+import appartement from "../../assets/appartement.png"
 
-export default function Map({ searchValue, toMapCopy, setToMap, iconImg }) {
+export default function Map({ searchValue, toMapCopy, setToMap }) {
    
-function newIcon(id) {
+function changeIcon({type,id}) {
     return new L.Icon({
-        iconUrl: iconImg,
+        iconUrl: type  == 2 ? house : appartement,
         iconAnchor: [5, 55],
         popupAnchor: [10, -44],
         iconSize: [40, 40],
-        id: id
+        id:id
     });
 }
 
@@ -31,22 +33,24 @@ function filterMap(map) {
       }
     });
     
-    // let newtoMapCopy = []
-    // toMapCopy.forEach((currentMap) => {
-    //     markers.forEach((marker) => {
-    //          if(marker.options.icon.options.id === currentMap.id){
-    //             newtoMapCopy.push(currentMap)
-    //          }
-    //      })
-    //    })
+// let newtoMapCopy = []
+// toMapCopy.forEach((currentMap) => {
+//     markers.forEach((marker) => {
+//          if(marker.options.icon.options.id === currentMap.id){
+//             newtoMapCopy.push(currentMap)
+//          }
+//      })
+//    })
 
-   const newMaps =  toMapCopy.filter((currentMap) => {
-       return markers.some((marker) => {
-        if (marker && marker.options && marker.options.icon && marker.options.icon.options) {
-            return marker.options.icon.options.id === currentMap.id;
-        }})
-      })
-      setToMap(newMaps)
+const newMaps =  toMapCopy.filter((currentMap) => {
+  return markers.some((marker) => {
+    if (marker && marker.options && marker.options.icon && marker.options.icon.options) {
+        return marker.options.icon.options.id === currentMap.id;
+    }})
+  })
+
+  setToMap(newMaps)
+
 }
 
   function Test() {
@@ -61,12 +65,10 @@ function filterMap(map) {
   }
 
   const filteredHouses = toMapCopy.filter(
-    (data) => data.lieu.ville.toLowerCase() === searchValue.toLowerCase()
+    (data) => data.ville.toLowerCase() === searchValue.toLowerCase()
   );
 
   let filteredMap = searchValue ? filteredHouses : toMapCopy;
-
-  console.log(filteredMap)
 
   return (
     <MapContainer
@@ -78,16 +80,16 @@ function filterMap(map) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {filteredMap.map((data) => (
+      {filteredMap && filteredMap.map((data) => (
         <Marker
           key={data.id}
           position={[data.latitude, data.longitude]}
-          icon={newIcon(data.id)}
+          icon={changeIcon(data)}
         >
           <Popup>
             <HousePopup
-              ville={data.lieu.ville}
-              code_postal={data.lieu.code_postal}
+              ville={data.ville}
+              code_postal={data.code_postal}
               prix_total={data.prix_total}
               surface_m2={data.surface_m2}
               description={data.description}

@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 
 export default function HouseList({ searchValue, toMap }) {
 
-    const filteredHouses = toMap.filter(data => data.lieu.ville.toLowerCase() === searchValue.toLowerCase());
+    const filteredHouses = toMap.filter(data => data.ville.toLowerCase() === searchValue.toLowerCase());
 
     let filteredMap = searchValue ? filteredHouses : toMap
 
@@ -28,11 +28,12 @@ export default function HouseList({ searchValue, toMap }) {
                 className="data-grid"
             >
                 <HouseCard 
+                    description={data.description}
                     type={data.typeName}
                     id={data.id}
                     photos={data.photos}
-                    ville={data.lieu.ville}
-                    code_postal={data.lieu.code_postal}
+                    ville={data.ville}
+                    code_postal={data.code_postal}
                     prix_total={data.prix_total}
                     surface_m2={data.surface_m2}
                 />

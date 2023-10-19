@@ -1,33 +1,18 @@
 import React from "react";
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import "./card.css"
 
-export default function HouseCard({ photos, ville, code_postal, prix_total, surface_m2, type }) {
+export default function HouseCard({ photos, ville, code_postal, prix_total, surface_m2, description}) {
     return (
-            <Card 
-                sx={{ width: 185, height: 310, backgroundColor: "grey" }}
-            >
-                <CardActionArea>
-                    <CardMedia
-                        component="img"
-                        height="120"
-                        image={photos}
-                        alt="Offer Image"
-                    />
-                    <CardContent>
-                        {type}
-                        <Typography gutterBottom variant="h5" component="div">
-                            {ville}, <br/> {code_postal}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            {prix_total} $ <br/>
-                            {surface_m2} m²
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-            </Card>
+        <div className="card">
+                <img className="card__image" src={photos} alt="photo de l'offre" width={450}/>
+            <div className="card__content">
+            <p className="card__title">{ville}, {code_postal}</p>
+            <p className="card__description">{description}</p>
+                <p className="card__infos">
+                    {prix_total} $ <br/>
+                    {surface_m2} m²
+                </p>
+            </div>
+          </div>
     )
 }
