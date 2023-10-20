@@ -22,7 +22,18 @@
 
 Pour profiter de l'application voici quelques petites choses à préparer : 
 
-- Installation de [React](https://fr.legacy.reactjs.org/docs/getting-started.html).
+- Commencer par cloner le repository de l'App, vous mettre sur le fichier et installer les node_modules 
+    -> dans le terminal : git clone https://github.com/RcdsDw/PlazaOffer.git
+                          cd plaza-offer
+                          npm i / npm install
+
 - Avoir [PHP](https://fr.legacy.reactjs.org/docs/getting-started.html) dans sa dernière version.
+
 - Installation de la base de données via le fichier [annonces_immobiliere.sql](https://github.com/RcdsDw/PlazaOffer/blob/main/docs/annonces_immobiliere.sql) dans le dossier "docs" de l'App.
-- Cloner le repo de l'[api](https://github.com/RcdsDw/Api-PlazaOffer/tree/main) et changer le lien de l'api dans l'app pour correspondre avec l'endroit ou vous l'avez placé.
+
+- Importer ce dernier dans un logiciel comme "wamp" ou "xamp" par exemple.
+
+- Cloner le repository de l'[api](https://github.com/RcdsDw/Api-PlazaOffer/tree/main) 
+    -> dans le terminal : git clone https://github.com/RcdsDw/Api-PlazaOffer.git
+
+- Changer le [lien de l'api](https://github.com/RcdsDw/PlazaOffer/blob/main/src/datas/datas.jsx) dans l'app pour correspondre avec l'endroit ou vous l'avez placé.
