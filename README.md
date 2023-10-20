@@ -23,9 +23,9 @@
 Pour profiter de l'application voici quelques petites choses à préparer : 
 
 - Commencer par cloner le repository de l'App, vous mettre sur le fichier et installer les node_modules 
-    - dans le terminal :  - git clone https://github.com/RcdsDw/PlazaOffer.git ,
-                          - cd plaza-offer ,
-                          - npm i / npm install
+    - dans le terminal :  1. git clone https://github.com/RcdsDw/PlazaOffer.git ,
+                          2. cd plaza-offer ,
+                          3. npm i / npm install
 
 - Avoir [PHP](https://fr.legacy.reactjs.org/docs/getting-started.html) dans sa dernière version.
 
@@ -34,6 +34,7 @@ Pour profiter de l'application voici quelques petites choses à préparer :
 - Importer ce dernier dans un logiciel comme "wamp" ou "xamp" par exemple.
 
 - Cloner le repository de l'[api](https://github.com/RcdsDw/Api-PlazaOffer/tree/main) 
-    - dans le terminal : git clone https://github.com/RcdsDw/Api-PlazaOffer.git
+    - dans le terminal :
+            1. git clone https://github.com/RcdsDw/Api-PlazaOffer.git
 
 - Changer le [lien de l'api](https://github.com/RcdsDw/PlazaOffer/blob/main/src/datas/datas.jsx) dans l'app pour correspondre avec l'endroit ou vous l'avez placé.
