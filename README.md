@@ -26,7 +26,3 @@ Pour profiter de l'application voici quelques petites choses à préparer :
 - Avoir [PHP](https://fr.legacy.reactjs.org/docs/getting-started.html) dans sa dernière version.
 - Installation de la base de données via le fichier [annonces_immobiliere.sql](https://github.com/RcdsDw/PlazaOffer/blob/main/docs/annonces_immobiliere.sql) dans le dossier "docs" de l'App.
 - Cloner le repo de l'[api](https://github.com/RcdsDw/Api-PlazaOffer/tree/main) et changer le lien de l'api dans l'app pour correspondre avec l'endroit ou vous l'avez placé.
-
-## Démo
-
-[Jeter un coup d'oeil](https://rcdsdw.github.io/PlazaOffer/)
