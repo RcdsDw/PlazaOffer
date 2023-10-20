@@ -15,7 +15,7 @@ export default function Map({ searchValue, toMapCopy, setToMap }) {
    
 function changeIcon({type,id}) {
     return new L.Icon({
-        iconUrl: type  === 2 ? house : appartement,
+        iconUrl: type  === "2" ? house : appartement,
         iconAnchor: [5, 55],
         popupAnchor: [10, -44],
         iconSize: [40, 40],
