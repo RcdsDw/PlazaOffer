@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+## Projet React CDA P4 "Plaza Offer"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+"Plaza Offer" est une application permettant de voir les différentes offres dans une zone donnée à l'aide de l'api Leaflet.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Détails
 
-### `npm start`
+- Affichage des offres en temps réel.
+- Affichage des offres lié aux marqueurs et rafrachissement de ces derniers en fonction des déplacements ou du zoom sur la carte.
+- Possibilité de rechercher une ville via une barre de rechercher et de n'afficher que cette dernière sur la carte.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technos Utilisées
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- HTML 5
+- CSS 3
+- JavaScript
+- React.js
+- PHP
+- SQL
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Pour profiter de l'application voici quelques petites choses à préparer : 
 
-### `npm run build`
+- Installation de [React](https://fr.legacy.reactjs.org/docs/getting-started.html).
+- Avoir [PHP](https://fr.legacy.reactjs.org/docs/getting-started.html) dans sa dernière version.
+- Installation de la base de données via le fichier [annonces_immobiliere.sql](https://github.com/RcdsDw/PlazaOffer/blob/main/docs/annonces_immobiliere.sql) dans le dossier "docs" de l'App.
+- Cloner le repo de l'[api](https://github.com/RcdsDw/Api-PlazaOffer/tree/main) et changer le lien de l'api dans l'app pour correspondre avec l'endroit ou vous l'avez placé.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Démo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Jeter un coup d'oeil](https://rcdsdw.github.io/PlazaOffer/)

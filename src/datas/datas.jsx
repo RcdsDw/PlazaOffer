@@ -4,6 +4,7 @@ async function fetchData() {
         const datas = await response.json();
         return datas
     } catch (error) {
+        return null
     }
 }
 

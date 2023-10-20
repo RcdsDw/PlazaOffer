@@ -3,6 +3,7 @@ import Map from '../map';
 import HouseList from '../list';
 import Header from '../headersTools';
 import fetchData from '../../datas/datas.jsx';
+import oldDatas from "../../datas/oldDatas.json"
 
 
 export default function Page() {
@@ -16,7 +17,8 @@ export default function Page() {
             setToMap(fetchedData);
             setToMapCopy(fetchedData);
           } catch (error) {
-            console.error('Erreur:', error);
+            setToMap(oldDatas);
+            setToMapCopy(oldDatas);
           }
         }
         fetchDataAndSetState();
