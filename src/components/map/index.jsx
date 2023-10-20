@@ -15,7 +15,7 @@ export default function Map({ searchValue, toMapCopy, setToMap }) {
    
 function changeIcon({type,id}) {
     return new L.Icon({
-        iconUrl: type  == 2 ? house : appartement,
+        iconUrl: type  === 2 ? house : appartement,
         iconAnchor: [5, 55],
         popupAnchor: [10, -44],
         iconSize: [40, 40],
@@ -32,22 +32,15 @@ function filterMap(map) {
         }
       }
     });
-    
-// let newtoMapCopy = []
-// toMapCopy.forEach((currentMap) => {
-//     markers.forEach((marker) => {
-//          if(marker.options.icon.options.id === currentMap.id){
-//             newtoMapCopy.push(currentMap)
-//          }
-//      })
-//    })
 
 const newMaps =  toMapCopy.filter((currentMap) => {
   return markers.some((marker) => {
     if (marker && marker.options && marker.options.icon && marker.options.icon.options) {
         return marker.options.icon.options.id === currentMap.id;
-    }})
+    }
+    return false;
   })
+})
 
   setToMap(newMaps)
 
